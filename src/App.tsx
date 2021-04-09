@@ -31,6 +31,7 @@ function App() {
   }
 
   useEffect(() => { 
+    console.log('hello')
     getListings()
     const subscription = DataStore.observe(Listing).subscribe(() => getListings())
     return () => subscription.unsubscribe()
